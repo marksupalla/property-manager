@@ -16,5 +16,13 @@ describe('Renter', function(){
     expect(renter1.cash).to.be.within(100, 500);
     expect(renter1.isEvicted).to.be.false;
   });
+ });
+    
+  describe('#work', function(){
+    it('should add cash to Renter', function(){
+    var renter1 = new Renter('Jerome', '44', 'Male', 'Slumlord');
+    renter1.work();
+      expect(renter1.cash).to.be.within(2000, 7000);
+    });
   });
 });
