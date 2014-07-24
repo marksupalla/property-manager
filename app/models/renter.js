@@ -31,4 +31,15 @@ Renter.prototype.work = function (){
 }
 };
 
+Renter.prototype.rent = function(amount) {
+    this.cash =  this.cash - amount;
+    if(this.cash <= 0){
+      this.isEvicted = true;
+    } else {
+      this.isEvicted = false;
+    }
+};
+
+
+
 module.exports = Renter;
