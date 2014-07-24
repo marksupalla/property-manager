@@ -43,4 +43,12 @@ describe('Renter', function(){
       expect(renter1.isEvicted).to.be.true;
   });
 });
+
+  describe('#party', function(){
+    it('should rate the renter\'s party level', function (){
+    var renter1 = new Renter('Jerome', '44', 'Male', 'Slumlord');
+    renter1.partyness();
+        expect(renter1.party).to.be.within(1,10);    
+    });
+  });
 });

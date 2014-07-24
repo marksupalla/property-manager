@@ -7,7 +7,7 @@ function Renter(name, age, gender, profession) {
   this.age = age;
   this.gender = gender;
   this.profession = profession;
-
+  this.party = 0;
   this.cash = Math.floor(Math.random() * 401) + 100;
   this.isEvicted = false;
 }
@@ -28,7 +28,8 @@ Renter.prototype.work = function (){
 
     case 'Clerk':
       this.cash = this.cash + Math.floor(Math.random() * 701) + 200;
-}
+  }
+  
 };
 
 Renter.prototype.rent = function(amount) {
@@ -40,6 +41,15 @@ Renter.prototype.rent = function(amount) {
     }
 };
 
-
+Renter.prototype.partyness = function(){
+      this.party = Math.floor(Math.random() * 10) + 1;
+      if (this.party > 8){
+      this.isEvicted = true;
+      }
+      else {
+      this.isEvicted = false;
+      }
+console.log(this.isEvicted);
+};
 
 module.exports = Renter;
