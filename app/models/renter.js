@@ -52,4 +52,6 @@ Renter.prototype.partyness = function(){
 console.log(this.isEvicted);
 };
 
+
+
 module.exports = Renter;
