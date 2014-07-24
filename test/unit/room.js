@@ -22,7 +22,6 @@ describe('Room', function(){
   describe('#area', function(){
     it('should find the area of a room', function(){
     var den = new Room('den', '12', '14');
-    den.area();
     expect(den.area()).to.equal(168);
     });
   });
@@ -30,7 +29,6 @@ describe('Room', function(){
   describe('#cost', function(){
     it('should find the cost of a room', function(){
     var den = new Room('den', '12', '14');
-    den.cost();
     expect(den.cost()).to.equal(840);
     });
   });
