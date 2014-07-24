@@ -1,7 +1,7 @@
 'use strict';
 
-function Apartment(unit) {
 
+function Apartment(unit) {
   this.unit = unit;
   this.rooms = [];
   this.renters = [];
@@ -34,26 +34,12 @@ Apartment.prototype.bedrooms = function(){
 };
 
 Apartment.prototype.isAvailable = function(){
-  if(this.bedrooms() > this.renters.length){
-     return true;
+  if (this.bedrooms() > this.renters.length){
+  console.log(this.bedrooms());
+   return true;
+  }else{
+   return false;
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = Apartment;
